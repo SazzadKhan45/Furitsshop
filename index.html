@@ -35,40 +35,62 @@
     <!-- Header section start here -->
     <header class="container mx-auto ">
         <!-- Navigation part start here -->
-        <nav class="mt-12 mb-14">
-            <div class="navbar h-[70px] bg-[#F85559] rounded-full">
-                <div class="navbar-start">
-                    <div class="dropdown">
-                        <label tabindex="0" class="btn btn-ghost btn-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h16M4 18h7" />
+            <nav class="mt-12 mb-14 bg-[#F85559] rounded-full border-gray-200">
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                    <a href="#" class="flex items-center">
+                        <img src="images/logo.png" class="h-8 mr-3" alt="Flowbite Logo" />
+                        <span
+                            class="self-center text-4xl font-semibold dark:text-white">Fruit Burst</span>
+                    </a>
+                    <div class="flex md:order-2">
+                        <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search"
+                            aria-expanded="false"
+                            class="md:hidden hidden text-gray-500 rounded-lg text-sm p-2.5 mr-1">
+                                viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                             </svg>
-                        </label>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Homepage</a></li>
-                            <li><a>Portfolio</a></li>
-                            <li><a>About</a></li>
+                            <span class="sr-only">Search</span>
+                        </button>
+                        <div class="relative hidden md:block">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                                <span class="sr-only">Search icon</span>
+                            </div>
+                            <input type="text" id="search-navbar"
+                                class=" rounded-full w-full p-2 pl-10 text-sm text-start"
+                                placeholder="Search...">
+                        </div>
+                        <button data-collapse-toggle="navbar-search" type="button"
+                            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700"
+                            aria-controls="navbar-search" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <i class="text-white text-2xl fa-solid fa-bars"></i>   
+                        </button> 
+                    </div>
+                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+                        id="navbar-search">
+                        <div class=" mt-3 md:hidden">
+                            <div class="inset-y-0 left-0 flex items-center pl-3">
+                                
+                            </div>
+                            <input type="text" id="search-navbar"
+                                class="text-end w-full rounded-full p-2 pl-10 text-sm"
+                                placeholder="Search...">
+                        </div>
+                        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
+                            <li><a href="#" class="block py-2 pl-3 pr-4 text-white">Home</a></li>
+                            <li><a href="#" class="block py-2 pl-3 pr-4 text-white">About Us</a></li>
+                            <li><a href="#" class="block py-2 pl-3 pr-4 text-white">Shop</a></li>
+                            <li><a href="#" class="block py-2 pl-3 pr-4 text-white">All Fruits</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="navbar-center">
-                    <img src="images/logo.png" alt="">
-                    <a class="btn btn-ghost normal-case text-4xl text-white font-bold">Fruit Burst</a>
-                </div>
-                <div class="navbar-end">
-                    <button class="btn  lg:visible lg:w-[400px] justify-end">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </nav>
+            </nav>
         <!-- Banner Slider part start here -->
         <div class="px-4 z-0">
             <div class="carousel w-full rounded-xl">
@@ -167,7 +189,8 @@
     <main class="container mx-auto mt-48">
         <!----------Deal of the day  -->
         <section>
-            <div class="flex justify-between  items-center flex-col lg:flex-row px-10 lg:px-0 text-center lg:text-start">
+            <div
+                class="flex justify-between  items-center flex-col lg:flex-row px-10 lg:px-0 text-center lg:text-start">
                 <div class="">
                     <h3 class="text-4xl font-bold text-[#121212]">Deal of the day</h3>
                     <p class="lg:pr-72 mt-6 pb-5">Contrary to popular belief, is not simply random text. It has roots in
@@ -193,7 +216,8 @@
                 </div>
             </div>
             <!-- Card part start here -->
-            <div class="grid items-center lg:content-between md:grid-cols-2 lg:grid-cols-4 lg:gap-10 justify-between items-center mt-10 gap-7">
+            <div
+                class="grid items-center lg:content-between md:grid-cols-2 lg:grid-cols-4 lg:gap-10 justify-between items-center mt-10 gap-7">
                 <div class="ml-16 md:ml-0 card w-[350px] lg:w-[300px] bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <img src="/images/fruit6.png" alt="Apples" class="rounded-xl" />
@@ -209,7 +233,7 @@
                             <i class="text-amber-300 text-xl fa-regular fa-star-half-stroke"></i>
                         </p>
                         <div class="card-actions">
-                            <button class=" text-[#F85559]"><a href="">Details</a></button>
+                            <button class=" text-[#F85559]"><a href="index1.html">Details</a></button>
                         </div>
                     </div>
                 </div>
@@ -228,7 +252,7 @@
                             <i class="text-amber-300 text-xl fa-regular fa-star-half-stroke"></i>
                         </p>
                         <div class="card-actions">
-                            <button class=" text-[#F85559]"><a href="">Details</a></button>
+                            <button class=" text-[#F85559]"><a href="index2.html">Details</a></button>
                         </div>
                     </div>
                 </div>
@@ -247,7 +271,7 @@
                             <i class="text-amber-300 text-xl fa-regular fa-star-half-stroke"></i>
                         </p>
                         <div class="card-actions">
-                            <button class=" text-[#F85559]"><a href="">Details</a></button>
+                            <button class=" text-[#F85559]"><a href="index3.html">Details</a></button>
                         </div>
                     </div>
                 </div>
@@ -266,7 +290,7 @@
                             <i class="text-amber-300 text-xl fa-regular fa-star-half-stroke"></i>
                         </p>
                         <div class="card-actions">
-                            <button class="text-[#F85559]"><a href="#">Details</a></button>
+                            <button class="text-[#F85559]"><a href="index4.html">Details</a></button>
                         </div>
                     </div>
                 </div>
@@ -288,7 +312,8 @@
                             <p class="mb-5 lg:px-[300px]">Contrary to popular belief, is not simply random text. It has
                                 roots in a
                                 piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-around items-center mt-12">
+                            <div
+                                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-around items-center mt-12">
                                 <div class="flex flex-col items-center text-center ">
                                     <img src="images/member1.png" class="w-[150px]" alt="Awlad Hossain">
                                     <h4 class="text-2xl text-white mt-6">Awlad Hossain</h4>
@@ -359,42 +384,54 @@
                 <div class="flex gap-8 flex-col lg:flex-row justify-center items-center">
                     <div class="flex gap-5 flex-col-reverse lg:flex-row  justify-center items-center">
                         <div class="">
-                            <div class="flex flex-col justify-center items-center lg:justify-start lg:items-start lg:flex-row gap-6">
+                            <div
+                                class="flex flex-col justify-center items-center lg:justify-start lg:items-start lg:flex-row gap-6">
                                 <div
                                     class="flex  bg-[#1212121A] rounded-full px-[15px] justify-center items-center h-[60px] w-[60px]">
                                     <p><i class="text-2xl fa-solid fa-users"></i></p>
                                 </div>
                                 <div class="text-center lg:text-start">
                                     <h3 class="text-2xl font-bold">Dedicated Team</h3>
-                                    <p class="mx-auto lg:mx-0 border-b-2 border-[#121212CC] w-[120px] opacity-50 mt-3 mb-3 "></p>
-                                    <p>Professional employees are there for you to pick the most amazing and fresh fruits.
+                                    <p
+                                        class="mx-auto lg:mx-0 border-b-2 border-[#121212CC] w-[120px] opacity-50 mt-3 mb-3 ">
+                                    </p>
+                                    <p>Professional employees are there for you to pick the most amazing and fresh
+                                        fruits.
                                     </p>
                                 </div>
                             </div>
-                            <div class="flex flex-col justify-center items-center lg:justify-start lg:items-start lg:flex-row gap-6 mt-4 mb-4">
+                            <div
+                                class="flex flex-col justify-center items-center lg:justify-start lg:items-start lg:flex-row gap-6 mt-4 mb-4">
                                 <div
                                     class="flex  bg-[#1212121A] rounded-full px-[15px] justify-center items-center h-[60px] w-[60px]">
                                     <p><i class="text-3xl fa-solid fa-heart-circle-check"></i></p>
                                 </div>
                                 <div class="text-center lg:text-start">
                                     <h3 class="text-2xl font-bold">Fresh is Best</h3>
-                                    <p class="mx-auto lg:mx-0 border-b-2 border-[#121212CC] w-[120px] opacity-50 mt-3 mb-3 "></p>
-                                    <p>Professional employees are there for you to pick the most amazing and fresh fruits.
+                                    <p
+                                        class="mx-auto lg:mx-0 border-b-2 border-[#121212CC] w-[120px] opacity-50 mt-3 mb-3 ">
+                                    </p>
+                                    <p>Professional employees are there for you to pick the most amazing and fresh
+                                        fruits.
                                     </p>
                                 </div>
                             </div>
-                            <div class="flex flex-col justify-center items-center lg:justify-start lg:items-start lg:flex-row gap-6">
+                            <div
+                                class="flex flex-col justify-center items-center lg:justify-start lg:items-start lg:flex-row gap-6">
                                 <div
                                     class="flex  bg-[#1212121A] rounded-full px-[15px] justify-center items-center h-[60px] w-[60px]">
                                     <p><i class="text-3xl fa-solid fa-gift"></i></p>
                                 </div>
                                 <div class="text-center lg:text-start">
                                     <h3 class="text-2xl font-bold">Gift Certificates</h3>
-                                    <p class="mx-auto lg:mx-0 border-b-2 border-[#121212CC] w-[120px] opacity-50 mt-3 mb-3 "></p>
-                                    <p>Professional employees are there for you to pick the most amazing and fresh fruits.
+                                    <p
+                                        class="mx-auto lg:mx-0 border-b-2 border-[#121212CC] w-[120px] opacity-50 mt-3 mb-3 ">
+                                    </p>
+                                    <p>Professional employees are there for you to pick the most amazing and fresh
+                                        fruits.
                                     </p>
                                 </div>
-                            </div>  
+                            </div>
                         </div>
                         <div class="pl-4">
                             <img src="images/whychoose1.png" class="lg:h-[400px] lg:w-[600px]" alt="Why Choose Us">
@@ -402,11 +439,15 @@
                     </div>
                     <div class="">
                         <div class="">
-                            <div class="flex flex-col-reverse justify-center items-center lg:justify-start lg:items-start lg:flex-row gap-6">
+                            <div
+                                class="flex flex-col-reverse justify-center items-center lg:justify-start lg:items-start lg:flex-row gap-6">
                                 <div class="text-center lg:text-end">
                                     <h3 class="text-2xl font-bold">Integrated Supplier</h3>
-                                    <p class="mx-auto lg:ml-44 lg:mx-0 border-b-2 border-[#121212CC] w-[120px] opacity-50 mt-3 mb-3 "></p>
-                                    <p>Professional employees are there for you to pick the most amazing and fresh fruits.
+                                    <p
+                                        class="mx-auto lg:ml-44 lg:mx-0 border-b-2 border-[#121212CC] w-[120px] opacity-50 mt-3 mb-3 ">
+                                    </p>
+                                    <p>Professional employees are there for you to pick the most amazing and fresh
+                                        fruits.
                                     </p>
                                 </div>
                                 <div
@@ -414,11 +455,15 @@
                                     <p><i class="text-3xl fa-solid fa-plate-wheat"></i></p>
                                 </div>
                             </div>
-                            <div class="flex flex-col-reverse justify-center items-center lg:justify-start lg:items-start lg:flex-row gap-6 mt-4 mb-4">
+                            <div
+                                class="flex flex-col-reverse justify-center items-center lg:justify-start lg:items-start lg:flex-row gap-6 mt-4 mb-4">
                                 <div class="text-center lg:text-end">
                                     <h3 class="text-2xl font-bold">Sustainable Practice</h3>
-                                    <p class="mx-auto lg:ml-44 border-b-2 border-[#121212CC] w-[120px] opacity-50 mt-3 mb-3 "></p>
-                                    <p>Professional employees are there for you to pick the most amazing and fresh fruits.
+                                    <p
+                                        class="mx-auto lg:ml-44 border-b-2 border-[#121212CC] w-[120px] opacity-50 mt-3 mb-3 ">
+                                    </p>
+                                    <p>Professional employees are there for you to pick the most amazing and fresh
+                                        fruits.
                                     </p>
                                 </div>
                                 <div
@@ -426,18 +471,22 @@
                                     <p><i class="text-3xl fa-solid fa-ice-cream"></i></p>
                                 </div>
                             </div>
-                            <div class="flex flex-col-reverse justify-center items-center lg:justify-start lg:items-start lg:flex-row gap-6">
+                            <div
+                                class="flex flex-col-reverse justify-center items-center lg:justify-start lg:items-start lg:flex-row gap-6">
                                 <div class="text-center lg:text-end">
                                     <h3 class="text-2xl font-bold">Gift Certificates</h3>
-                                    <p class="mx-auto lg:ml-44 border-b-2 border-[#121212CC] w-[120px] opacity-50 mt-3 mb-3 "></p>
-                                    <p>Professional employees are there for you to pick the most amazing and fresh fruits.
+                                    <p
+                                        class="mx-auto lg:ml-44 border-b-2 border-[#121212CC] w-[120px] opacity-50 mt-3 mb-3 ">
+                                    </p>
+                                    <p>Professional employees are there for you to pick the most amazing and fresh
+                                        fruits.
                                     </p>
                                 </div>
                                 <div
                                     class="flex  bg-[#1212121A] rounded-full px-[15px] justify-center items-center h-[60px] w-[60px]">
                                     <p><i class="text-3xl fa-regular fa-thumbs-up"></i></p>
                                 </div>
-                            </div>  
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/3adb7007d7.js" crossorigin="anonymous"></script>
+    <!-- Lato font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .Latofont {
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="Latofont">
+    <div class="">
+        <div class="ml-16 md:ml-0 card w-[350px] lg:w-[300px] bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+                <img src="/images/fruit9.png" alt="Apples" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+                <h2 class="card-title">Banana</h2>
+                <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                <p>
+                    <i class="text-amber-600 text-xl fa-solid fa-star"></i>
+                    <i class="text-amber-600 text-xl fa-solid fa-star"></i>
+                    <i class="text-amber-600 text-xl fa-solid fa-star"></i>
+                    <i class="text-amber-300 text-xl fa-regular fa-star-half-stroke"></i>
+                    <i class="text-amber-300 text-xl fa-regular fa-star-half-stroke"></i>
+                </p>
+                <div class="card-actions flex gap-10 items-center">
+                    <button class="border-2 border-[#F85559] text-[#F85559] px-4 py-1 rounded"><a href="index.html">Close</a></button>
+                    <button class=" text-white bg-[#F85559] p-2 rounded"><a href="">Buy Now</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
